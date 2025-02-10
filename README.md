@@ -33,3 +33,7 @@ Python Snippet for the addition of 2 numbers
 [GitHub Glossary](https://docs.github.com/en/get-started/learning-about-github/github-glossary)
 
 [Git Documentation](https://git-scm.com/doc)
+
+## Local Repository Changes
+
+![Image of the Tecnológíco de Monterrey Logo with Text](images.png)

@@ -7,4 +7,13 @@ Emiliano Deyta
 ## Description
 This repository is used to show how GitHub functions and its several features.
 
-###### This is an `<h6>` header, which is the smallest
+## Contents
+
+### Images
+
+## References
+[GitHub Documentation](https://docs.github.com/en)
+
+[GitHub Glossary](https://docs.github.com/en/get-started/learning-about-github/github-glossary)
+
+[Git Documentation](https://git-scm.com/doc)

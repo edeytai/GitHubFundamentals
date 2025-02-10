@@ -11,6 +11,22 @@ This repository is used to show how GitHub functions and its several features.
 
 ### Images
 
+![Image of the Tecnológíco de Monterrey Logo](Logo_del_ITESM.svg)
+
+### Code Examples
+
+Python Snippet for the addition of 2 numbers
+
+```python
+ result = num1 + num2
+```
+
+### Contents
+
+- [x] Turn on GitHub Pages
+- [ ] Outline my portfolio
+- [ ] Introduce myself to the world
+
 ## References
 [GitHub Documentation](https://docs.github.com/en)
 

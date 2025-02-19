@@ -30,87 +30,87 @@ export function firstNonRepeating(string) {
     }
 }
 
-export function bubbleSort(arr) {
-    let n = arr.length;
-    for (let i = 0; i < n - 1; i++) {
-        for (let j = 0; j < n - i - 1; j++) {
-            if (arr[j] > arr[j + 1]) {
-                let temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
+export function bubbleSort(inputArray) {
+    let arrayLength = inputArray.length;
+    for (let outerIndex = 0; outerIndex < arrayLength - 1; outerIndex++) {
+        for (let innerIndex = 0; innerIndex < arrayLength - outerIndex - 1; innerIndex++) {
+            if (inputArray[innerIndex] > inputArray[innerIndex + 1]) {
+                let temporaryValue = inputArray[innerIndex];
+                inputArray[innerIndex] = inputArray[innerIndex + 1];
+                inputArray[innerIndex + 1] = temporaryValue;
             }
         }
     }
-    return arr;
+    return inputArray;
 }
 
-export function invertArray(arr) {
-    let result = [];
-    for (let i = arr.length - 1; i >= 0; i--) {
-        result.push(arr[i]);
+export function invertArray(originalArray) {
+    let reversedArray = [];
+    for (let currentIndex = originalArray.length - 1; currentIndex >= 0; currentIndex--) {
+        reversedArray.push(originalArray[currentIndex]);
     }
-    return result;
+    return reversedArray;
 }
 
-export function invertArrayInplace(arr) {
-    let left = 0;
-    let right = arr.length - 1;
-    while (left < right) {
-        let temp = arr[left];
-        arr[left] = arr[right];
-        arr[right] = temp;
-        left++;
-        right--;
+export function invertArrayInplace(inputArray) {
+    let leftIndex = 0;
+    let rightIndex = inputArray.length - 1;
+    while (leftIndex < rightIndex) {
+        let temporaryValue = inputArray[leftIndex];
+        inputArray[leftIndex] = inputArray[rightIndex];
+        inputArray[rightIndex] = temporaryValue;
+        leftIndex++;
+        rightIndex--;
     }
 }
 
-export function capitalize(str) {
-    let words = str.split(' ');
-    for (let i = 0; i < words.length; i++) {
-        if (words[i]) {
-            words[i] = words[i][0].toUpperCase() + words[i].slice(1);
+export function capitalize(inputString) {
+    let wordArray = inputString.split(' ');
+    for (let wordIndex = 0; wordIndex < wordArray.length; wordIndex++) {
+        if (wordArray[wordIndex]) {
+            wordArray[wordIndex] = wordArray[wordIndex][0].toUpperCase() + wordArray[wordIndex].slice(1);
         }
     }
-    return words.join(' ');
+    return wordArray.join(' ');
 }
 
-export function mcd(a, b) {
-    while (b !== 0) {
-        let temp = b;
-        b = a % b;
-        a = temp;
+export function mcd(firstNumber, secondNumber) {
+    while (secondNumber !== 0) {
+        let temporaryValue = secondNumber;
+        secondNumber = firstNumber % secondNumber;
+        firstNumber = temporaryValue;
     }
-    return Math.abs(a);
+    return Math.abs(firstNumber);
 }
 
-export function hackerSpeak(str) {
-    let map = { 'a': '4', 'e': '3', 'i': '1', 'o': '0', 's': '5' };
-    let result = '';
-    for (let i = 0; i < str.length; i++) {
-        let char = str[i].toLowerCase();
-        result += map[char] || str[i];
+export function hackerSpeak(inputString) {
+    let characterMapping = { 'a': '4', 'e': '3', 'i': '1', 'o': '0', 's': '5' };
+    let transformedString = '';
+    for (let characterIndex = 0; characterIndex < inputString.length; characterIndex++) {
+        let lowerCaseCharacter = inputString[characterIndex].toLowerCase();
+        transformedString += characterMapping[lowerCaseCharacter] || inputString[characterIndex];
     }
-    return result;
+    return transformedString;
 }
 
-export function factorize(num) {
-    let factors = [];
-    for (let i = 1; i <= Math.abs(num); i++) {
-        if (num % i === 0) {
-            factors.push(i);
+export function factorize(inputNumber) {
+    let factorArray = [];
+    for (let potentialFactor = 1; potentialFactor <= Math.abs(inputNumber); potentialFactor++) {
+        if (inputNumber % potentialFactor === 0) {
+            factorArray.push(potentialFactor);
         }
     }
-    return factors;
+    return factorArray;
 }
 
-export function deduplicate(arr) {
-    let unique = [];
-    for (let i = 0; i < arr.length; i++) {
-        if (!unique.includes(arr[i])) {
-            unique.push(arr[i]);
+export function deduplicate(inputArray) {
+    let uniqueValues = [];
+    for (let currentIndex = 0; currentIndex < inputArray.length; currentIndex++) {
+        if (!uniqueValues.includes(inputArray[currentIndex])) {
+            uniqueValues.push(inputArray[currentIndex]);
         }
     }
-    return unique;
+    return uniqueValues;
 }
 
 export function findShortestString(arr) {
@@ -124,76 +124,52 @@ export function findShortestString(arr) {
     return minLength;
 }
 
-export function isPalindrome(str) {
-    let reversed = '';
-    for (let i = str.length - 1; i >= 0; i--) {
-        reversed += str[i];
-    }
-    return str === reversed;
+export function isPalindrome(inputString) {
+    let reversedString = inputString.split('').reverse().join('');
+    return inputString === reversedString;
 }
 
-export function sortStrings(arr) {
-    for (let i = 0; i < arr.length - 1; i++) {
-        for (let j = 0; j < arr.length - i - 1; j++) {
-            if (arr[j] > arr[j + 1]) {
-                let temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
-            }
+export function sortStrings(inputArray) {
+    return inputArray.sort();
+}
+
+export function stats(numberArray) {
+    if (numberArray.length === 0) return [0, 0];
+    let sum = numberArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+    let mean = sum / numberArray.length;
+    let modeMapping = {};
+    let modeValue = numberArray[0];
+    let highestFrequency = 1;
+    for (let currentNumber of numberArray) {
+        modeMapping[currentNumber] = (modeMapping[currentNumber] || 0) + 1;
+        if (modeMapping[currentNumber] > highestFrequency) {
+            highestFrequency = modeMapping[currentNumber];
+            modeValue = currentNumber;
         }
     }
-    return arr;
+    return [mean, modeValue];
 }
 
-export function stats(arr) {
-    if (arr.length === 0) return [0, 0];
-    arr.sort((a, b) => a - b);
-    let median = arr.length % 2 === 0 ? (arr[arr.length / 2 - 1] + arr[arr.length / 2]) / 2 : arr[Math.floor(arr.length / 2)];
-    let modeMap = {};
-    let mode = arr[0];
-    let maxCount = 1;
-    for (let num of arr) {
-        modeMap[num] = (modeMap[num] || 0) + 1;
-        if (modeMap[num] > maxCount) {
-            maxCount = modeMap[num];
-            mode = num;
+export function popularString(stringArray) {
+    if (stringArray.length === 0) return "";
+    let frequencyMapping = {};
+    let highestFrequency = 0;
+    let mostFrequentString = "";
+    for (let currentString of stringArray) {
+        frequencyMapping[currentString] = (frequencyMapping[currentString] || 0) + 1;
+        if (frequencyMapping[currentString] > highestFrequency) {
+            highestFrequency = frequencyMapping[currentString];
+            mostFrequentString = currentString;
         }
     }
-    return [median, mode];
+    return mostFrequentString;
 }
 
-export function popularString(arr) {
-    let freq = {};
-    let maxCount = 0;
-    let mostPopular = '';
-    for (let str of arr) {
-        freq[str] = (freq[str] || 0) + 1;
-        if (freq[str] > maxCount) {
-            maxCount = freq[str];
-            mostPopular = str;
-        }
-    }
-    return mostPopular;
+export function isPowerOf2(inputNumber) {
+    return (inputNumber > 0) && ((inputNumber & (inputNumber - 1)) === 0);
 }
 
-export function isPowerOf2(num) {
-    if (num < 1) return false;
-    while (num > 1) {
-        if (num % 2 !== 0) return false;
-        num /= 2;
-    }
-    return true;
+export function sortDescending(inputArray) {
+    return inputArray.sort((a, b) => b - a);
 }
 
-export function sortDescending(arr) {
-    for (let i = 0; i < arr.length - 1; i++) {
-        for (let j = 0; j < arr.length - i - 1; j++) {
-            if (arr[j] < arr[j + 1]) {
-                let temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
-            }
-        }
-    }
-    return arr;
-}

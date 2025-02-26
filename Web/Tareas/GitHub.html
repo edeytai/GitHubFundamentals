@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="titulo">
+        GitHub
+    </header>
+
+    <div>
+        <p class="parrafo">
+            En esta pagina de GitHub se dará un repaso a todos los comandos, y conceptos basicos que se vieron en clase sobre GitHub y el flujo de trabajo
+        </p>
+    </div>
+
+    <div>
+        <img class="imagen" src="LogoGitHub.gif">
+    </div>
+
+    <p></p>
+    
+    <div>
+        <h6 class="subtitulo">
+            ¿Qué es Git?
+        </h6>
+        <p class="parrafo2">
+            Git es un sistema de control de versiones que permite rastrear cambios en el código, colaborar con otros y recuperar versiones anteriores de un proyecto.
+        </p>
+    </div>
+
+    <div>
+        <h6 class="subtitulo">
+            ¿Qué es GitHub?
+        </h6>
+        <p class="parrafo2">
+            GitHub es una plataforma en la nube que permite almacenar, compartir y colaborar en proyectos que usan Git.
+        </p>
+    </div>
+
+    <div>
+        <h6 class="subtitulo">
+            Flujo de trabajo
+        </h6>
+
+        <p class="parrafo2">
+            Primero tendremos que instalar Git en nuestra computadora, los metodos varian dependiendo de que tipo de sistema operativo utilicemos. Tambien tendremos que configurar nuestra identidad y agregar una clave SSH
+        </p>
+
+        <p class="parrafo2">
+            Para comenzar a utilizar GitHub tenemos que crear una cuenta en GitHub, puedes crear tu cuenta <a href="https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home"> Aqui.</a> Debes crear un repositorio asignándole un nombre y eligiendo si será público o privado. Puedes modificar o agregar archivos directamente desde la plataforma. Cada cambio se guarda con un commit, que registra la historia del proyecto y facilita la colaboración.
+
+        <p class="parrafo2">
+            Para trabajar con repositorios remotos en GitHub, es esencial clonar el repositorio a tu máquina local. Esto crea una copia completa del proyecto en tu computadora, permitiéndote trabajar de manera independiente. Para clonar un repositorio, utiliza el comando git clone seguido de la URL del repositorio remoto. Una vez clonado, puedes realizar cambios localmente y, posteriormente, sincronizarlos con el repositorio remoto mediante comandos como git push y git pull. Este flujo de trabajo facilita la colaboración y asegura que todos los colaboradores estén actualizados con las últimas modificaciones del proyecto.
+        </p>
+
+        <p class="parrafo2">
+            A continuación se muestra una tabla para saber que hace cada comando de git que sirve para clonar repositorios, realizar commits, restaurar cambios o cualquier comando importante que te pueda ayudar:
+        </p>
+    </div>
+
+    <div class="col text-center">
+        <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Comando</th>
+                <th scope="col">Descripción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">git clone [URL]</th>
+                <td>Copia un repositorio remoto a tu máquina.</td>
+              </tr>
+              <tr>
+                <th scope="row">git add [archivo]</th>
+                <td>Añade el archivo especificado al área de preparación (staging area).</td>
+              </tr>
+              <tr>
+                <th scope="row">git add -A</th>
+                <td>Añade todos los archivos (nuevos, modificados y eliminados) al área de preparación.</td>
+              </tr>
+              <tr>
+                <th scope="row">git status</th>
+                <td>Muestra el estado de los archivos (modificados, añadidos o sin seguimiento).</td>
+              </tr>
+              <tr>
+                <th scope="row">git log</th>
+                <td>Muestra el historial de commits.</td>
+              </tr>
+              <tr>
+                <th scope="row">git commit -m "[mensaje]"</th>
+                <td>Guarda los cambios con un mensaje.</td>
+              </tr>
+              <tr>
+                <th scope="row">git push -u origin main</th>
+                <td>Sube cambios a la rama main en el remoto.</td>
+              </tr>
+              <tr>
+                <th scope="row">git restore [archivo]</th>
+                <td>Revierte cambios no confirmados.</td>
+              </tr>
+              <tr>
+                <th scope="row">git restore --staged [archivo]</th>
+                <td>Saca el archivo del staging, pero mantiene los cambios.</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+
+    <div>
+        <p class="parrafo2">
+            Es recomendable usar el comando <i>git status</i> despues de cada uso del resto de los comandos para asegurarse de que todo esté en orden.
+        </p>
+    </div>
+
+    <div>
+        <p class="parrafo2">
+            Tambien podemos trabajar con branches, que nos permiten trabajar en paralelo sin interferir en el trabajo de otros. Una rama es una versión paralela del repositorio principal (main), donde se pueden realizar cambios de forma aislada.
+        </p>
+
+        <p class="parrafo2">
+            Para esto existen los <b>Pull Requests</b>, que permitien que varias personas trabajen en un mismo proyecto sin conflictos. Los colaboradores crean una rama, hacen cambios y la envían al repositorio remoto para que el líder la revise y fusione en la rama principal.
+
+        </p>
+
+        <p class="parrafo2">
+            A continuación se muestra una tabla con los comandos relevantes para trabajar con branches y pull requests:
+        </p>
+    </div>
+
+    <div class="col text-center">
+        <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Comando</th>
+                <th scope="col">Descripción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">git branch [nombre_rama]</th>
+                <td>Crea una nueva rama llamada [nombre_rama].</td>
+              </tr>
+              <tr>
+                <th scope="row">git checkout [nombre_rama]</th>
+                <td>Cambia a la rama especificada.</td>
+              </tr>
+              <tr>
+                <th scope="row">git switch [nombre_rama]</th>
+                <td>Cambia a la rama especificada.</td>
+              </tr>
+              <tr>
+                <th scope="row">git checkout -b [nombre_rama]</th>
+                <td>Crea y cambia a una nueva rama en un solo paso.</td>
+              </tr>
+              <tr>
+                <th scope="row">git fetch -a</th>
+                <td>Descarga actualizaciones de todas las ramas sin fusionarlas.</td>
+              </tr>
+              <tr>
+                <th scope="row">git merge [nombre_rama]</th>
+                <td>Fusiona la rama [nombre_rama] con la rama actual.</td>
+              </tr>
+              <tr>
+                <th scope="row">git branch -d [nombre_rama]</th>
+                <td>Elimina la rama especificada si ya ha sido fusionada.</td>
+              </tr>
+              <tr>
+                <th scope="row">git branch -D [nombre_rama]</th>
+                <td>Fuerza la eliminación de la rama, incluso si no ha sido fusionada.</td>
+              </tr>
+              <tr>
+                <th scope="row">git push -u origin [nombre_rama]</th>
+                <td>Envía los cambios locales de la rama especificada al repositorio remoto </td>
+              </tr>
+              <tr>
+            </tbody>
+          </table>
+    </div>
+
+    <div>
+        <p class="parrafo2">
+            Tambien para los pull requests podemos ocupar <a href="https://docs.github.com/en/get-started/using-github/github-flow">GitHub Flow</a> que facilita el desarrollo colaborativo de estos pull requests, esto se hace a traves del repositorio remoto donde estan los pull requests que hacen los demás colaboradores. <b>GitHub Flow</b> te permite revisar y aprovar estos cambios que hacen los demas colaboradores.
+        </p>
+    </div>
+
+    <div class="col text-center">
+        <button type="button" class="btn btn-light"><a href="HTMLBlog.html">Regresar a inicio</a></button>
+    </div>
+
+</body>
+</html>

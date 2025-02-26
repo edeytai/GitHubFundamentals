@@ -1,0 +1,42 @@
+html, body{
+    margin: 10px;
+    background-color: black;   
+    color: white; 
+}
+
+.titulo{
+    text-align: center;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    font-size: 35px;
+}
+
+.parrafo{
+    text-align: center;
+    font-size: 15px;
+}
+
+.parrafo2{
+    text-align: justify;
+    font-size: 15px;
+}
+
+.imagen{
+    display: block;
+    margin: auto;
+    width: 250px;
+    left: 250px;
+}
+
+.subtitulo{
+    text-align: center;
+    font-size: 25px;
+    background-color: white;
+    color: black;
+    padding: 20px;
+}
+
+.list{
+    font-size: 18px;
+}

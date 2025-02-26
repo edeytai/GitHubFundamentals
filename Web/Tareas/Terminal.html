@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="titulo">
+        Terminal
+    </header>
+
+    <div>
+        <p class="parrafo">
+            En esta pagina de Terminal se dará un repaso a todos los comandos que nos permiten navegar y utilizar la terminal.
+        </p>
+    </div>
+
+    <div>
+        <img class="imagen" src="TerminalHacker.jpg">
+        <p></p>
+    </div>
+
+    <div>
+        <h6 class="subtitulo">
+            ¿Qué es la Terminal?
+        </h6>
+        <p class="parrafo2">
+            La terminal es una interfaz de línea de comandos que permite a los usuarios comunicarse con el sistema operativo mediante texto. A través de ella, se pueden ejecutar programas, navegar por directorios, manipular archivos y realizar configuraciones avanzadas sin necesidad de una interfaz gráfica.
+        </p>
+
+        <p class="parrafo2">
+            A continuación se presenta una tabla con los comandos mas relevantes:
+        </p>
+    </div>
+
+    <div class="col text-center">
+        <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Comando</th>
+                <th scope="col">Descripción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">ls</th>
+                <td>Muestra el contenido del directorio actual.</td>
+              </tr>
+              <tr>
+                <th scope="row">cd [directorio]</th>
+                <td>Cambia al directorio especificado.</td>
+              </tr>
+              <tr>
+                <th scope="row">pwd</th>
+                <td>Muestra la ruta del directorio actual.</td>
+              </tr>
+              <tr>
+                <th scope="row">cd ..</th>
+                <td>Cambia al directorio anterior al actual.</td>
+              </tr>
+              <tr>
+                <th scope="row">mkdir [nombre]</th>
+                <td>Crea un nuevo directorio.</td>
+              </tr>
+              <tr>
+                <th scope="row">rm [archivo]</th>
+                <td>Elimina un archivo.</td>
+              </tr>
+              <tr>
+                <th scope="row">rm -r [directorio]</th>
+                <td>Borra un directorio y su contenido.</td>
+              </tr>
+              <tr>
+                <th scope="row">cp [origen] [destino]</th>
+                <td>Copia un archivo o directorio al destino especificado.</td>
+              </tr>
+              <tr>
+                <th scope="row">mv [origen] [destino]</th>
+                <td>Mueve un archivo o directorio al destino especificado.</td>
+              </tr>
+              <tr>
+                <th scope="row">touch [archivo]</th>
+                <td>Crea un archivo vacío.</td>
+              </tr>
+              <tr>
+                <th scope="row">cat [archivo]</th>
+                <td>Muestra el contenido de un archivo.</td>
+              </tr>
+              <tr>
+                <th scope="row">man [comando]</th>
+                <td>Muestra el manual de un comando.</td>
+              </tr>
+              <tr>
+                <th scope="row">history</th>
+                <td>Muestra el historial de comandos utilizados</td>
+              </tr>
+              <tr>
+                <th scope="row">vim [archivo]</th>
+                <td>Edita un archivo desde la terminal.
+                    <p>
+                        <b>i</b>: Permite editar el archivo.
+                    </p>
+                    <p>
+                        <b>Tecla esc</b>: Sale del modo de edición.
+                    </p>
+                    <p>
+                        <b>:w</b> : Guarda los cambios del archivo.
+                    </p>
+                    <p>
+                        <b>:q</b> : Salir del editor.
+                    </p>
+                    <p>
+                        <b>:!q</b> : Confirma la salida del editor sin guardar cambios.
+                    </p>
+                    <p>
+                        <b>:wq</b> : Guarda el archivo y sale del editor.
+                    </p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">clear</th>
+                <td>Limpia la pantalla de la terminal.</td>
+              </tr>
+              <tr>
+                <th scope="row">code .</th>
+                <td>Abre VSCode en la dirección actual.</td>
+              </tr>
+              <tr>
+                <th scope="row">head/tail [archivo] -n</th>
+                <td>Visualiza las primeras o ultimas lineas de un archivo.</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+
+
+    <div class="col text-center">
+        <button type="button" class="btn btn-light"><a href="HTMLBlog.html">Regresar a inicio</a></button>
+    </div>
+</body>
+</html>

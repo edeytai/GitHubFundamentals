@@ -1,0 +1,61 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background-color: #1c1a36;
+    color: white;
+}
+
+header nav {
+    margin: 18.72px;
+    display: flex;
+    gap: 15px;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#subscribeSection {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    background-color: #1c1a36 ;
+    color: white;
+}
+
+#subscribeSection form {
+    margin: 18px;
+    display: flex;
+}
+
+#subscribeSection button {
+    background-color: orange;
+}
+
+#imgSection {
+    display: flex;
+    text-align: center;
+    padding: 20px;
+}
+
+#imgSection p {
+    margin: 20px;
+}
+
+#texto {
+    padding: 25px;
+    text-align: center;
+    background-color: orange;
+}
+
+#texto p {
+    text-align: justify;
+}
+
+footer {
+    text-align: center;
+    background-color: #1c1a36;
+    padding: 25px;
+    color: white;
+}

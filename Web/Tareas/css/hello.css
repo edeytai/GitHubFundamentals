@@ -1,0 +1,36 @@
+* {
+    margin: 10px;
+}
+h1{
+    color: #0000ff;
+    border: black 3px solid;
+    padding: 15px;
+    margin: 10px;
+}
+
+body{
+    border: black 3px solid;
+    border-radius: 10px;
+    margin: 0px;
+}
+
+header {
+    border: red 2px solid;
+    margin: 20px;
+    padding: 20px;
+}
+
+footer p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+footer {
+    border: green 3px, solid;
+}
+
+nav {
+    border: orange 3px solid;
+    background-image: url("../Images/DancingKid.gif");
+}

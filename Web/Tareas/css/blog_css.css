@@ -1,0 +1,56 @@
+html, body{
+    margin: 10px;
+    background-color: black;   
+    color: white; 
+}
+
+.titulo{
+    text-align: center;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    font-size: 35px;
+}
+
+.subtitulo{
+    text-align: center;
+    font-size: 25px;
+    background-color: white;
+    color: black;
+    padding: 10px;
+}
+
+.parrafo{
+    text-align: justify;
+    font-size: 15px;
+    border: white 5px solid;
+    border-radius: 15px;
+    padding: 10px;
+    overflow: auto;
+    margin: 10px;
+}
+
+.imagen{
+    display: block;
+    margin: auto;
+    padding: 10px;
+}
+
+ul {
+    border: white 3px dotted;
+    border-radius: 10px;
+    padding: 20px;
+
+}
+
+footer {
+    text-align: justify;
+    font-size: 15px;
+    border: white 5px solid;
+    border-radius: 15px;
+    padding: 50px;
+    overflow: auto;
+    margin: 10px;
+    background-image: url("../Images/ThumbsUp.gif");
+    text-align: center;
+}

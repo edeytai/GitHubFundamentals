@@ -1,0 +1,47 @@
+body {
+    background-color: grey;
+    height: 100vh;
+}
+
+.gridClass {
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border: 3px solid white;
+}
+
+.gridContainer {
+    height: calc(100% - 16px);
+    display: grid;
+    /* 3 columnas y 3 filas en total */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    gap: 10px;
+
+    /* Definimos las áreas según el layout de la imagen */
+    grid-template-areas:
+        "header header header"   /* Fila 1 */
+        "left   main   main"     /* Fila 2 */
+        "left   sub1   sub2";    /* Fila 3 */
+}
+
+/* Asignamos cada #gridItem a su área */
+#gridItem1 {
+    grid-area: header;  /* Rectángulo largo de la parte superior */
+}
+
+#gridItem2 {
+    grid-area: left;    /* Cuadrado a la izquierda (ocupa 2 filas) */
+}
+
+#gridItem3 {
+    grid-area: main;    /* Rectángulo de la fila intermedia a la derecha */
+}
+
+#gridItem4 {
+    grid-area: sub1;    /* Primer espacio debajo del rectángulo de arriba (columna 2) */
+}
+
+#gridItem5 {
+    grid-area: sub2;    /* Segundo espacio (columna 3) */
+}

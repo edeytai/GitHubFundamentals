@@ -1,0 +1,15 @@
+.container {
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+table, td {
+    border: 1px solid black;
+}
+
+/* Estilo para las respuestas a las preguntas */
+.respuesta {
+    font-style: italic;
+    margin-left: 20px;
+    color: #333;
+}
